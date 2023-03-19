@@ -114,7 +114,7 @@ app.get("/conoce", (req, res) => {
   res.render("conoce");
 });
 //GET /MAPA
-app.get("./mapa/mapa", (req, res) => {
+app.get("/mapa", (req, res) => {
     res.render("mapa");
   });
 // GET /salir
