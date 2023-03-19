@@ -207,7 +207,7 @@ app.post("/delete/:id", (req, res) => {
 
 
 
-
+module.exports = app
 app.listen(3000, () => {
     console.log("(http://localhost:5000/)");
 });
