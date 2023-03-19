@@ -1,11 +1,40 @@
-let map = L.map('map').setView([20.68139306044883, -103.35294671539657],6)
+var map = L.map('map-template').setView([51.505, -0.09], 3);
 
-//Agregar tilelAyer mapa base desde openstreetmap
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
+const tileURL = 'https://b.tile.openstreetmap.org/{z}/{x}/{y}.png' 
+const tileURL2 = 'https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png';
 
-document.getElementById('select-location').addEventListener('change',function(e){
-  let coords = e.target.value.split(",");
-  map.flyTo(coords,13);
-})
+const tile = L.tileLayer(tileURL2);
+
+// Socket Io
+const socket = io.connect();
+
+// Marker
+const marker = L.marker([50.5, 30.5]); // kiev, ukraine
+marker.bindPopup('Hello There!');
+map.addLayer(marker);
+
+// Geolocation
+map.locate({enableHighAccuracy: true})
+map.on('locationfound', (e) => {
+  const coords = [e.latlng.lat, e.latlng.lng];
+  const newMarker = L.marker(coords);
+  newMarker.bindPopup('You are Here!');
+  map.addLayer(newMarker);
+  socket.emit('userCoordinates', e.latlng);
+});
+
+// socket new User connected
+socket.on('newUserCoordinates', (coords) => {
+  console.log(coords);
+  const userIcon = L.icon({
+    iconUrl: '/img/icon2.png',
+    iconSize: [38, 42],
+  })
+  const newUserMarker = L.marker([coords.lat, coords.lng], {
+    icon: userIcon 
+  });
+  newUserMarker.bindPopup('New User!');
+  map.addLayer(newUserMarker);
+}); 
+
+map.addLayer(tile);
