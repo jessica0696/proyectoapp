@@ -113,7 +113,10 @@ app.get("/about", (req, res) => {
 app.get("/conoce", (req, res) => {
   res.render("conoce");
 });
-
+//GET /MAPA
+app.get("./mapa/mapa", (req, res) => {
+    res.render("mapa");
+  });
 // GET /salir
 app.get("/salir", (req, res) => {
   res.render("salir");
