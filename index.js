@@ -6,7 +6,7 @@ const passportLocal = require('passport-local');
 const path = require("path");
 const bodyParser = require('body-parser');
 const sqlite3 = require("sqlite3").verbose();
-const home = require("./views/home");
+const home = require("./views/register");
 
 // Middlewares
 const app = express();
