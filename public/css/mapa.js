@@ -10,3 +10,7 @@ document.getElementById('select-location').addEventListener('change',function(e)
 L.marker([20.68139306044883, -103.35294671539657]).addTo(map)
     .bindPopup('Carro abandonado')
     .openPopup();
+
+    L.marker([20.663315, -103.385290]).addTo(map)
+    .bindPopup('Tacos baratos de bistec')
+    .openPopup();
