@@ -7,3 +7,8 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 L.marker([20.68139306044883, -103.35294671539657]).addTo(map)
     .bindPopup('Carro abandonado')
     .openPopup();
+
+    document.getElementById('select-location').addEventListener('change',function(e){
+        let coords = e.target.value.split(",");
+        map.flyTo(coords,13);
+      })
