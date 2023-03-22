@@ -58,7 +58,7 @@ app.use(passport.session());
 
 //login form
 app.get("/", (req, res) => {
-  res.render("prin");
+  res.render("iniciofront");
 })
 
 
