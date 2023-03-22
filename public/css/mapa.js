@@ -14,7 +14,7 @@ L.marker([20.68139306044883, -103.35294671539657]).addTo(map)
     L.marker([20.663315, -103.385290], { draggable: true }).addTo(map)
     .bindPopup('Tacos baratos de bistec')
     .openPopup();
-
+//buscador barra
 L.Control.geocoder().addTo(map);
 
 //onclick marker
@@ -24,11 +24,12 @@ map.on("click", function(e){
     .openPopup();
     console.log(e)
 });
+//guardar datos leaflet
+
 
 
 //flecha up 
 $(document).ready(function(){
-
 	$('.ir-arriba').click(function(){
 		$('body, html').animate({
 			scrollTop: '0px'
@@ -42,5 +43,4 @@ $(document).ready(function(){
 			$('.ir-arriba').slideUp(300);
 		}
 	});
-
 });
