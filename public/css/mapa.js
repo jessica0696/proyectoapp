@@ -14,3 +14,5 @@ L.marker([20.68139306044883, -103.35294671539657]).addTo(map)
     L.marker([20.663315, -103.385290], { draggable: true }).addTo(map)
     .bindPopup('Tacos baratos de bistec')
     .openPopup();
+
+L.Control.geocoder().addTo(map);
