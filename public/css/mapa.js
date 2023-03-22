@@ -19,12 +19,14 @@ L.Control.geocoder().addTo(map);
 
 //onclick marker
 map.on("click", function(e){
-    var marker = new L.marker([e.latlng.lat, e.latlng.lng]).addTo(map);
+    var marker = new L.marker([e.latlng.lat, e.latlng.lng]).addTo(map)
+    .bindPopup('nuevo marcador')
+    .openPopup();
     console.log(e)
 });
 
 
-//flecha
+//flecha up 
 $(document).ready(function(){
 
 	$('.ir-arriba').click(function(){
