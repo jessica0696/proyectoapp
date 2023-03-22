@@ -20,6 +20,7 @@ L.Control.geocoder().addTo(map);
 //onclick marker
 map.on("click", function(e){
     var marker = new L.marker([e.latlng.lat, e.latlng.lng]).addTo(map);
+    console.log(e)
 });
 
 
