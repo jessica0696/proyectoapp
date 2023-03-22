@@ -16,3 +16,8 @@ L.marker([20.68139306044883, -103.35294671539657]).addTo(map)
     .openPopup();
 
 L.Control.geocoder().addTo(map);
+
+//onclick marker
+map.on("click", function(e){
+    var marker = new L.marker([e.latlng.lat, e.latlng.lng]).addTo(map);
+});
