@@ -39,21 +39,27 @@ L.Control.geocoder().addTo(map);
 
 //onclick marker
 
-//guardar datos leaflet
+//guardar datos en json
 
 //llamar datos
 const getData = async () =>{
-    const responseParaderoa = await fetch('./css/paraderos-rutas.json');
-    const dataParaderos = await responseParaderoa.json();
-    paraderos = dataParaderos.features;
+const responseParaderoa = await fetch('./css/paraderos-rutas.json');
+const dataParaderos = await responseParaderoa.json();
+paraderos = dataParaderos.features;
 
-    const getLine = (nameLine) => paraderos.filter(paradero => paradero.properties.vigilanciaanimal.includes(nameLine))
-
-    console.log(paraderos);
-            L.geoJSON(paraderos).addTo(map)
-            .bindPopup("aqui esta un pin json")
-            .openPopup();
+const getLine = (nameLine) => paraderos.filter(paradero => paradero.properties.alerta.includes(nameLine))
+console.log(paraderos);
+//funcion para poner texto en el pin
+function onEachFeature(feature, Layer){
+    if (feature.properties && feature.properties.alerta){
+        Layer.bindPopup(feature.properties.alerta)
+    }
+}
+//pines aqui
+            L.geoJSON(paraderos, {
+            onEachFeature
+            }).addTo(map)
+            
 }
 
-getData();
-
+getData()

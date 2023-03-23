@@ -4,10 +4,7 @@
     {
       "type": "Feature",
       "properties": {
-        "vigilanciaanimal": "un perro agresivo",
-        "servicios": "carpintero",
-        "ventas": "tacos",
-        "viapublica": "bache"
+        "alerta": "perro agresivo"
       },
       "geometry": {
         "coordinates": [
@@ -21,10 +18,7 @@
     {
       "type": "Feature",
       "properties": {
-        "vigilanciaanimal": "perro abandonado",
-        "servicios": "pediatra",
-        "ventas": "ropa de mujer",
-        "viapublica": "alcantarilla abierta"
+        "alerta": "venta de garaje"
       },
       "geometry": {
         "coordinates": [
@@ -34,6 +28,35 @@
         "type": "Point"
       },
       "id": 1
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "alerta": "ofresco mis servicios de carpinteria"
+      },
+      "geometry": {
+        "coordinates": [
+          -103.32865218757608,
+          20.664814286064995
+        ],
+        "type": "Point"
+      },
+      "id": 2
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "alerta": "robo de camioneta"
+      },
+      "geometry": {
+        "coordinates": [
+          -103.35046070935152,
+          20.669501306043145
+        ],
+        "type": "Point"
+      },
+      "id": 3
     }
+
   ]
 }
