@@ -21,3 +21,10 @@ text-align: center;
 	color: rgb(5, 35, 99);
 	text-align: center;	
 }
+scroll-container {
+	display: block;
+	width: 350px;
+	height: 200px;
+	overflow-y: scroll;
+	scroll-behavior: smooth;
+  }
