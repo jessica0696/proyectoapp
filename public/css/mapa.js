@@ -29,13 +29,12 @@ const getData = async () =>{
     const responseParaderoa = await fetch('./css/paraderos-rutas.json');
     const dataParaderos = await responseParaderoa.json();
     paraderos = dataParaderos.features;
-    console.log(paraderos);
 
     const getLine = (nameLine) => paraderos.filter(paradero => paradero.properties.vigilanciaanimal.includes(nameLine))
 
     const paraderosRuta1 = getLine("un perro agresivo");
-    console.log(paraderosRuta1);
-            L.geoJSON(paraderosRuta1).addTo(map);
+    console.log(paraderos);
+            L.geoJSON(paraderos).addTo(map);
 }
 
 getData();
