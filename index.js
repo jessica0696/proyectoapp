@@ -56,7 +56,7 @@ app.use(express.static('public'));
 app.use(passport.initialize());
 app.use(passport.session());
 
-//login form
+//inicio de la app
 app.get("/", (req, res) => {
   res.render("iniciofront");
 })
