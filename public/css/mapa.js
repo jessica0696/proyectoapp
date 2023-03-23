@@ -21,12 +21,7 @@ L.marker([20.68139306044883, -103.35294671539657]).addTo(map)
 L.Control.geocoder().addTo(map);
 
 //onclick marker
-map.on("click", function(e){
-    var marker = new L.marker([e.latlng.lat, e.latlng.lng]).addTo(map)
-    .bindPopup('nuevo marcador')
-    .openPopup();
-    console.log(e)
-});
+
 //guardar datos leaflet
 
 //llamar datos
@@ -39,14 +34,8 @@ const getData = async () =>{
     const getLine = (nameLine) => paraderos.filter(paradero => paradero.properties.vigilanciaanimal.includes(nameLine))
 
     const paraderosRuta1 = getLine("un perro agresivo");
-
-            L.geoJSON(paraderosRuta1, {
-                style: function (feature) {
-                    return {color: feature.properties.color};
-                }
-            }).bindPopup(function (layer) {
-                return layer.feature.properties.description;
-            }).addTo(map);
+    console.log(paraderosRuta1);
+            L.geoJSON(paraderosRuta1).addTo(map);
 }
 
 getData();
