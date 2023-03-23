@@ -1,0 +1,39 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "vigilanciaanimal": "un perro agresivo",
+        "servicios": "carpintero",
+        "ventas": "tacos",
+        "viapublica": "bache"
+      },
+      "geometry": {
+        "coordinates": [
+          -103.33665957910682,
+          20.665375161265686
+        ],
+        "type": "Point"
+      },
+      "id": 0
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "vigilanciaanimal": "perro abandonado",
+        "servicios": "pediatra",
+        "ventas": "ropa de mujer",
+        "viapublica": "alcantarilla abierta"
+      },
+      "geometry": {
+        "coordinates": [
+          -103.33086020433869,
+          20.666745492600043
+        ],
+        "type": "Point"
+      },
+      "id": 1
+    }
+  ]
+}
