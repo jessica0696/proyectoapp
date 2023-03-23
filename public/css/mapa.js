@@ -29,7 +29,27 @@ map.on("click", function(e){
 });
 //guardar datos leaflet
 
+//llamar datos
+const getData = async () =>{
+    const responseParaderoa = await fetch('./css/paraderos-rutas.json');
+    const dataParaderos = await responseParaderoa.json();
+    paraderos = dataParaderos.features;
+    console.log(paraderos);
 
+    const getLine = (nameLine) => paraderos.filter(paradero => paradero.properties.vigilanciaanimal.includes(nameLine))
+
+    const paraderosRuta1 = getLine("un perro agresivo");
+
+            L.geoJSON(paraderosRuta1, {
+                style: function (feature) {
+                    return {color: feature.properties.color};
+                }
+            }).bindPopup(function (layer) {
+                return layer.feature.properties.description;
+            }).addTo(map);
+}
+
+getData();
 
 //flecha up 
 $(document).ready(function(){
