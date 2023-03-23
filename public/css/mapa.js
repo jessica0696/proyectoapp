@@ -32,9 +32,10 @@ const getData = async () =>{
 
     const getLine = (nameLine) => paraderos.filter(paradero => paradero.properties.vigilanciaanimal.includes(nameLine))
 
-    const paraderosRuta1 = getLine("un perro agresivo");
     console.log(paraderos);
-            L.geoJSON(paraderos).addTo(map);
+            L.geoJSON(paraderos).addTo(map)
+            .bindPopup("aqui esta un pin json")
+            .openPopup();
 }
 
 getData();
