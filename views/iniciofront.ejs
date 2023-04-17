@@ -6,10 +6,24 @@
 <section class="header">
     <h1>Echale Ojo</h1>
     <p>¡Trabajemos juntos para mantener nuestra colonia segura y protegida!</p>
-    <a class="btn-bgstroke">Ver mapa</a>
+    <a class="btn-bgstroke" href="/mapa">Ver mapa</a>
 </section>
+<div class="background-2" id="what-is">
+  <div class="container">
+      <div class="row">
+          <div class="col s12 center-align">
+              <h2 class="title-what-is"  data-aos="zoom-in">¿Qué es Echale OJO?</h2>
+              <div class="line-shape"></div>
+              <br>
+              <p class="text-sideflip">
+                Con nuestra herramienta, puedes informar y alertar fácilmente sobre cualquier actividad sospechosa en tu vecindario.
+                Además, puedes recibir actualizaciones en tiempo real sobre la actividad en tu zona y colaborar con otros miembros de la comunidad para garantizar la seguridad de todos.
+              </p>
+          </div>
+      </div>
+</div class="background-2" id="what-is">
 <section class="eldiv">
-    <h1>Nuestra Galeria</h1>
+    <h1 class="gallerytitulo">Nuestra Galeria</h1>
     <div class="gallery">
       <img src="https://images.unsplash.com/photo-1516470930795-6ba2564824aa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80" title="TITLE 1">
       <img src="https://images.unsplash.com/photo-1535401991746-da3d9055713e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=863&q=80" title="TITLE 2">
@@ -19,6 +33,26 @@
       <img src="https://images.unsplash.com/photo-1528698827591-e19ccd7bc23d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=876&q=80" title="TITLE 6">
     </div>
   </section>
+  <div>
+    <h3>Contactanos</h3>
+    <form action="/action_page.php">
+      <label for="fname">Nombre</label>
+      <input type="text" id="fname" name="firstname" placeholder="Nombre">
+  
+      <label for="lname">Apellido</label>
+      <input type="text" id="lname" name="lastname" placeholder="Apellido">
+  
+      <label for="country">Colonia</label>
+      <select id="country" name="country">
+        <option value="Zona centro">Zona centro</option>
+        <option value="San Juan de Dios">San Juan de Dios</option>
+        <option value="Col. Americana">Col. Americana</option>
+        <option value="Jardines del bosque">Jardines del bosque</option>
+      </select>
+    
+      <input type="submit" value="Submit">
+    </form>
+  </div>
    <script>
     window.onload = () => {
         for (let i of document.querySelectorAll(".gallery img")) {

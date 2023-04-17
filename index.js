@@ -94,8 +94,8 @@ app.get("/login", (req, res) => {
   res.render("login");
 });
 // Get /pagina principal
-app.get("/prin", (req, res) => {
-  res.render("prin");
+app.get("/iniciofront", (req, res) => {
+  res.render("iniciofront");
 });
 
 // Get /signup
