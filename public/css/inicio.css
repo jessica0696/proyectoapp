@@ -1,0 +1,138 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,100,700,900);
+
+h1,
+p,
+a{
+  margin: 0;
+  padding: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+h1 {
+  font-size: 2.8em;
+  padding: 10px 0;
+  font-weight: 800;
+}
+
+p {
+  font-size: 1.1em;
+  font-weight: 100;
+  letter-spacing: 1px;
+  padding: 0px 100px;
+}
+
+.header {
+
+  padding: 210px 30px 120px;
+  top: 4.4vw;
+  left: 4.1vw;
+  text-align: center;
+  justify-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  background-position: 50% 50%;
+  width: 100%;
+  background-position: 50% 50%;
+  background-image: url(https://images.pexels.com/photos/12494903/pexels-photo-12494903.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+}
+
+
+.btn-bgstroke {
+  font-size: 20px;
+  display: inline-block;
+  border: 1px solid white;
+  padding: 10px 20px;
+  background-color: rgb(5, 35, 99);
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 300;
+  margin-top: 30px; 
+  color: white;
+}
+
+.btn-bgstroke:hover {
+  background-color: white;
+  color: rgb(5, 35, 99);
+}
+.gallerytitulo{
+    text-align: center;  
+}
+.background-2{
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.background-2 .title-what-is{
+    color: var(--primary-font-color2);
+    justify-content: center;
+    text-align: center;  
+
+}
+
+.line-shape, .line-shape-2{
+    width: 80px;
+    height: 2px;
+    margin-left: calc(50% - 40px);
+    background-color: var(--primary-font-color2);
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.background-2 .text-sideflip{
+    text-align: center;
+    margin: 0 60px 0 60px;
+    justify-content: center;
+}
+/* pasos*/
+
+main .sobre-nosotros{
+  padding: 30px 0 60px 0;
+}
+.contenedor-sobre-nosotros{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 65px;
+}
+
+.imagen-about-us{
+  width: 28%;
+}
+
+.sobre-nosotros .contenido-textos{
+  width: 48%;
+}
+
+.contenido-textos h3{
+  margin-bottom: 15px;
+}
+
+.contenido-textos h3 span{
+  background: rgb(5, 35, 99);
+  color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  padding: 2px;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+  margin-right: 5px;
+}
+
+.contenido-textos p{
+  padding: 0px 0px 30px 15px;
+  font-weight: 300;
+  text-align: justify;
+}
+.titulo {
+  color: rgb(5, 35, 99);
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+
+
+
+

@@ -1,22 +1,28 @@
+<head>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
 <%- include("_headerinicial") -%>
 
-<h1>LOGIN</h1>
-<div class="container">
-    <div class="card">
-        <div class="card-body">
-            <form method="post">
-                <div class="row mb-3">
-                    <label for="username1" class="form-label col-xs-2">Login</label>
-                    <input type="text" name="username" id="username1" class="col-xs-4" />
+
+    <body>
+
+        <div class="inner-screen">
+
+            <form class="form" method="post">
+                <h2>LOGIN</h2>
+                <div>
+                    <label for="username1">Username</label>
+                    <input type="text" name="username" id="username1" />
                 </div>
-                <div class="row mb-3">
-                    <label for="passw1" class="form-label col-xs-2">Password</label>
-                    <input type="password" name="password" id="passw1" class="col-xs-4" />
+                <div>
+                    <label for="passw1">Password</label>
+                    <input type="password" name="password" id="passw1" />
                 </div>
-                <input type="submit" class="btn btn-success" />
+                <div>
+                    <input type="submit" value="entrar" />
+                </div>
             </form>
-            <a href="/register" class="btn btn-info">REGISTRARSE</a>
+            <a href="/register">REGISTRARSE</a>
         </div>
-    </div>
-</div>
-<%- include("_footer") -%>
+    </body>
+    <%- include("_footer") -%>

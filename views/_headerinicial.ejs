@@ -5,21 +5,59 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>echaleOJO</title>
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/header.css">
 </head>
 
 <body>
-
+    <header>
+        <div class="wrapper">
+            <div class="logo">
+                <a href="/iniciofront"><img src="/img/ojoLOGO.png" alt="echaleOjo"></a>
+            </div>
+            <div class="navbar">
+                <div class="close-nav"><button>x</button></div>
+                <nav>
+                    <ul>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/iniciofront">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/conoce">Conoce</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/mapa">Mapa</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/login">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/signup">Registrarse</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/data/">Anuncios</a>
+                        </li>                        
+                    </ul>
+                </nav>
+            </div>
+            <div class="menu-bar">
+                <button><i></i></button>
+            </div>
+        </div>
+    </header>
     <div class="container">
+        <!-- Content -->
+    </div>
+    <script>
+        const theBody = document.querySelector('body');
+        const openNav = document.querySelector('.menu-bar button');
+        const closeNav = document.querySelector('.close-nav button');
+        const Navbar = document.querySelector('.navbar');
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="/">echaleOJO</a>
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="/conoce">Conoce</a>
-                    <a class="nav-link" href="/mapa">Mapa</a>
-                    <a class="nav-link" href="/login">Login</a>
-                    <a class="nav-link" href="/signup">Registrarse</a>
-                </li>
-            </ul>
-        </nav>
+        function showHide() {
+            Navbar.classList.toggle('show');
+            // bodyScroll();
+        }
+
+        openNav.onclick = showHide;
+        closeNav.onclick = showHide;
+    </script>
