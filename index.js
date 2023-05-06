@@ -17,7 +17,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: false }));
 
 // Conexión a la base de datos
-//const db_name = path.join(__dirname, "data", "apptest.db");
+
 const db = require('./data/db');
 
 app.use(session({
@@ -64,7 +64,7 @@ app.get("/", (req, res) => {
 
 //login procedure
 app.post("/login", passport.authenticate("local", { failureRedirect: "/login" }),
-  (req, res) => { res.redirect("/prin"); });
+  (req, res) => { res.redirect("/iniciofront"); });
 
 
 //register form

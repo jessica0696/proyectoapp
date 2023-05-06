@@ -1,11 +1,10 @@
+<!-- Pagina de login con link a pagina de registro -->
 <head>
     <link rel="stylesheet" href="/css/login.css">
 </head>
 <%- include("_headerinicial") -%>
 
-
     <body>
-
         <div class="inner-screen">
 
             <form class="form" method="post">
@@ -15,7 +14,7 @@
                     <input type="text" name="username" id="username1" />
                 </div>
                 <div>
-                    <label for="passw1">Password</label>
+                    <label for="passw1">Contraseña</label>
                     <input type="password" name="password" id="passw1" />
                 </div>
                 <div>
@@ -25,4 +24,5 @@
             <a href="/register">REGISTRARSE</a>
         </div>
     </body>
-    <%- include("_footer") -%>
+
+<%- include("_footer") -%>
